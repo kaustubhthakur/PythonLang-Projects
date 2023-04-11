@@ -6,6 +6,11 @@ WIDTH,HEIGHT=600,500
 WIN = pygame.display.set_mode((WIDTH,HEIGHT))
 pygame.display.set_caption("Space Interpreter")
 
+BG = pygame.transform.scale(pygame.image.load("images/download.jpg"),(WIDTH,HEIGHT))
+
+def draw():
+    WIN.blit(BG,(0,0));
+    pygame.display.update()
 
 def main():
     run = True
@@ -15,6 +20,8 @@ def main():
             if event.type == pygame.QUIT:
                 run = False
                 break
+
+        draw()
     
     pygame.quit()
 
