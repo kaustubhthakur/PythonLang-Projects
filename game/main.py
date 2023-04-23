@@ -52,7 +52,7 @@ def main():
         elapsed_time=time.time()-start_time
 
         if star_count >star_add_increment:
-            for _ in range(4):
+            for _ in range(6):
                 star_x = random.randint(0,WIDTH-STAR_WIDTH)
                 star = pygame.Rect(star_x,-STAR_HEIGHT,STAR_HEIGHT,STAR_WIDTH)
                 stars.append(star)
